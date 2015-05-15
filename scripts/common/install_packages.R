@@ -3,6 +3,9 @@
 #can add packages to it by including them in the lists of 'requiredCRANPackages' and
 #'requiredBioconductorPackages'.  
 
+#add the Rstudio CRAN mirror to avoid prompting
+options(repos = c(CRAN = "http://cran.rstudio.com"))
+
 #check that the packages required for the analysis are installed, and prompt to install them
 #if not
 #check for CRAN packages
