@@ -8,6 +8,7 @@
 ## packages
 require(ggplot2)
 require(gridExtra)
+require(grid)
 
 ## parameters
 data.path <- '../../results/'

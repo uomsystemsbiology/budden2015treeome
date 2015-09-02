@@ -9,6 +9,7 @@
 require(preprocessCore)
 require(ggplot2)
 require(gridExtra)
+require(grid)
 
 ## parameters
 data.path <- '../../data/'
