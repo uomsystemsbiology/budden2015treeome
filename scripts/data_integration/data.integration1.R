@@ -140,6 +140,10 @@ fig1 <- arrangeGrob(density.plots[['hesc']], density.plots[['gm12878']], density
                     scatter.plots[['hesc']], scatter.plots[['gm12878']], scatter.plots[['k562']],
                     ncol=3, nrow=2, heights=c(1,3))
 grid.draw(fig1)
+
+## removing class check from ggsave as a workaround.  This will break at some point in the future
+ggsave <- ggplot2::ggsave; body(ggsave) <- body(ggplot2::ggsave)[-2]
+
 ggsave(fig1, file=sprintf('%sfigure3_regression.pdf', results.path), width=12.5, height=5.76)
 ## export at 8.97" by 5.76" (default)
 
